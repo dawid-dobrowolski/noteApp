@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteApp</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/add.css">
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="side_menu_box">
+                <div class="menu_list">
+                    <ul>
+                        <a href="profile"><li class="circle" id="profile"><img src="/img/user.png"></li></a>
+                        <a href="homepage"><li class="circle" id="homepage"><img src="/img/home.png"></li></a>
+                        <a href="favorites-notes"><li class="circle" id="favorite"><img src="/img/favorite.png"></li></a>
+                        <a href="add-note"><li class="circle" id="add"><img src="/img/plus.png"></li></a>
+                        <%- include('_logout_form') %>
+                    </ul>
+                </div>
+                <div class="vertical_line"></div>
+            </div>
+            <div class="note_container">

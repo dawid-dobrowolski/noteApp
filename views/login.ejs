@@ -1,0 +1,30 @@
+<!--include header-->
+<%- include('include/_header') %>
+<!--/include header-->
+<div class="container">
+    <div class="image_box">
+        <center>
+            <div class="image_wrapper">
+                <img src="img/home_page_img.png">
+            </div>
+        </center>
+    </div>
+    <div class="login_box">
+        <center>
+            <% if (message !== undefined) { %>   
+                <div class="response">
+                    <p><%= message %></p> 
+                </div>    
+               <% } %>
+        <div class="login_box_content">
+            <p>Welcome Back</p>
+            <p class="extra_text">Sign to your Account</p>
+<!--include loginForm-->
+<%- include('include/_login_form') %>
+<!--/include loginForm-->
+</div>
+</center>
+</div>
+</div>
+</body>
+</html>

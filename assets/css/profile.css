@@ -1,0 +1,156 @@
+:root{
+    --rich_black: #11151C;
+    --rich_black_darker: #3e3e40;
+    
+    --prusian_blue: #212d40;
+    --prusian_blue_darker: #101928;
+    
+    --charcoal: #364156;
+    --charcoal_darker: #172134;
+    
+    --rose_taupe: #7d3e57;
+    --rose_taupe_darker: #522034;
+    
+    --jasper: #d66853;
+    --jasper_darker: #be533e;
+    
+    --white: #ffffff;
+    --white_hover: #f6dcdc;
+}
+
+.main_container {
+    height: 94vh;
+}
+
+.options-container {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.account-details {
+    width: 70%;
+}
+.boxcontainer {
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+
+#box {
+    width: 100%;
+    height: 100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: var(--prusian_blue);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-style: solid;
+    border-width: 2px;
+    text-decoration: none;
+    color:black;
+}
+
+.section h3 {
+    padding-top: 20px;
+}
+.section p {
+    font-size: 15px;
+    color:#3e3e40
+}
+
+.title {
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+    font-size: 40px;
+    position: sticky;
+}
+
+label {
+    width: 500px;
+    display: inline-block;
+    padding: 15px;
+}
+
+input {
+    display: block;
+}
+
+#mailLabel {
+    margin-top: 20px;
+    width:100% !important;
+}
+
+.account-details {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+.extra-container {
+        box-shadow: 0 5px 10px rgba(0,0,0,.5);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        border-radius: 10px;
+}
+
+.accountForm {
+    width: 88%;
+}
+
+.actionButtons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.actionButtons button {
+    height: 40px;
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border: none;
+    color: var(--white);
+}
+
+#btn-update {
+    background-color: #dd931d;
+}
+
+.boxSelected {
+    background-color: #c4c4c7;
+    color:black;
+}
+
+.response {
+    height: fit-content;
+    margin-top: 10%;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #8dc776;
+}
+.response_fail {
+    height: fit-content;
+    margin-top: 2%;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #a71c1c;
+}
+
+@media only screen and (max-width: 1800px){
+    .account-details {
+        width: 90%;
+    }
+  }

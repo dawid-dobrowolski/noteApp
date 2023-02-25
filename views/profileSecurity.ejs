@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteApp</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/add.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="side_menu_box">
+                <div class="menu_list">
+                    <ul>
+                        <a href="profile"><li class="circle" id="profile"><img src="/img/user.png"></li></a>
+                        <a href="homepage"><li class="circle" id="homepage"><img src="/img/home.png"></li></a>
+                        <a href="favorites-notes"><li class="circle" id="favorite"><img src="/img/favorite.png"></li></a>
+                        <a href="add-note"><li class="circle" id="add"><img src="/img/plus.png"></li></a>
+                        <%- include('include/_logout_form') %>
+                    </ul>
+                </div>
+                <div class="vertical_line"></div>
+            </div>
+            <div class="main_container">
+                <div class="options-container">
+                    <% if (message !== undefined) { %>   
+                        <div class="response_fail">
+                            <p><%= message %></p> 
+                        </div>    
+                       <% } %>
+                    <div class="boxcontainer">
+                        <a id="box" href="profile"><div class="section" id="accountSetting">
+                            <h3>Account Setting</h3>
+                            <p>Details about your Personal information</p>
+                            </div></a>
+                            <a id="box" class="boxSelected" href="profileSecurity"><div class="section" id="passwordSetting">
+                            <h3>Password & Security</h3>
+                            <p>Here you can change your password</p>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="account-details">
+                    <div class="extra-container">
+                        <form class="accountForm" action="/api/user/updateUserPassword?user_id=<%= user[0].user_id %>" id="form1" method = "POST">
+                            <label for="imie">New password<input type="password" class="form-control" id="password" name="password" required minlength="8" maxlength="32" placeholder="Enter Password"></label>
+                            <label for="nazwisko">Confirm new password<input type="password" class="form-control" id="passwordConfirmed" name="passwordConfirmed" required minlength="8" maxlength="32" placeholder="Enter Password"></label>
+                        </form>
+                        <div class="actionButtons">
+                            <button type="submit" form="form1" id="btn-update" value="Submit">Update Password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

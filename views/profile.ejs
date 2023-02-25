@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteApp</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/add.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="side_menu_box">
+                <div class="menu_list">
+                    <ul>
+                        <a href="profile"><li class="circle" id="profile"><img src="/img/user.png"></li></a>
+                        <a href="homepage"><li class="circle" id="homepage"><img src="/img/home.png"></li></a>
+                        <a href="favorites-notes"><li class="circle" id="favorite"><img src="/img/favorite.png"></li></a>
+                        <a href="add-note"><li class="circle" id="add"><img src="/img/plus.png"></li></a>
+                        <%- include('include/_logout_form') %>
+                    </ul>
+                </div>
+                <div class="vertical_line"></div>
+            </div>
+            <div class="main_container">
+                <div class="options-container">
+                    <% if (message !== undefined) { %>   
+                        <div class="response">
+                            <p><%= message %></p> 
+                        </div>    
+                       <% } %>
+                    <div class="boxcontainer">
+                        <a id="box" class="boxSelected" href="profile"><div class="section" id="accountSetting">
+                        <h3>Account Setting</h3>
+                        <p>Details about your Personal information</p>
+                        </div></a>
+                        <a id="box" href="profileSecurity"><div class="section" id="passwordSetting">
+                        <h3>Password & Security</h3>
+                        <p>Here you can change your password</p>
+                        </div></a>
+                    </div>
+                </div>
+                <div class="account-details">
+                    <div class="extra-container">
+                        <form action="/api/user/updateUser?user_id=<%= user[0].user_id%>" class="accountForm" id="form1" method = "POST">
+                            <label for="imie">Name<input type="text" class="form-control" id="name" name="name" required minlength="3" maxlength="45" placeholder="Enter Name" value="<%= user[0].user_name %>"></label>
+                            <label for="nazwisko">Surname<input type="text" class="form-control" id="surname" name="surname" required minlength="3" maxlength="45" placeholder="Enter Surname" value="<%= user[0].user_surname %>"></label>
+                            <label for="mail" id="mailLabel">Email<input type="email" class="form-control" id="email" name="email" required minlength="8" maxlength="50" pattern=".+@+.+" title="example@example.com" placeholder="Enter E-Mail" value="<%= user[0].user_email %>"></label>
+                        </form>
+                        <div class="actionButtons">
+                            <button type="submit" form="form1" id="btn-update" value="Submit">Update Information</button>
+                            <form action="/api/user/deleteUser?user_id=<%= user[0].user_id%>" id="deleteForm" name="deleteForm" method = "POST">
+                                <button type="submit" id="btn-register" class="btn-delete">Delete Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

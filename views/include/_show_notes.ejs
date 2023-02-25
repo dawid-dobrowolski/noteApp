@@ -1,0 +1,4 @@
+<% for(var i=0; i<notes.length;i++) {%>
+    <a href="/update-note?note_id=<%= notes[i].note_id%>" id="note_href"><div class="note" id="color" style="background-color: <%= notes[i].note_color %>;">
+        <p><%= notes[i].note_text_short%></p></div></a>
+    <% } %>

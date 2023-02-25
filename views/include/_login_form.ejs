@@ -1,0 +1,15 @@
+
+<form action="/loginAuth" method = "POST">
+    <div class="form-group">
+        <br>
+        <label for="mail">E-Mail</label><br>
+        <input type="email" class="form-control" id="username" name="username" required placeholder="Enter E-Mail">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label><br>
+        <input type="password" class="form-control" id="password" name="password" required minlength="5" maxlength="32" placeholder="Enter Password">
+    </div>
+    <a href="/homepage"><button type="submit" id="btn-register" class="btn">Sign In</button></a>
+    <br><br>
+    <a href="/register" class="register">New User? Create Account</a>
+</form>

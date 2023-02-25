@@ -1,0 +1,26 @@
+<div class="title">Add new note</div>
+                <div class="add_note_form">
+                    <form action="/api/note/addNote" id="confirmationForm" name="confirmationForm" method = "POST">
+                        <div class="form-group">
+                            <br>
+                            <input type="text" class="form-control" id="note_title" name="note_title" required placeholder="Enter Note Title">
+                        </div>
+                        <label for="colorpicker" id="colorLabel">Pick note color:</label>
+                        <div class="form-group" id="color_picker">
+                            <input type="color" id="colorpicker" name="note_color" value="#F4C16E">
+                        </div>
+                        <div class="form-group" id="favorite_picker">
+                            <label for="note_favorite" id="colorLabel">Favorite note:</label>
+                            <input type="checkbox" id="note_favorite" name="note_favorite" value=1>
+                        </div>
+                        <div class="form-group">
+                            <!-- <input type="text" class="form-control2" id="text" name="text" required minlength="5" maxlength="32" placeholder="Enter content of the note"> -->
+                            <textarea id="note_text" name="note_text" class="userInput" form="confirmationForm"></textarea>
+                        </div>
+                            <div class="form-buttons">
+                                <button type="submit" id="btn-register" class="btn-save">Save</button>
+                    </form>
+                                <button type="submit" id="btn-register" onclick="location.href='homepage'" class="btn-cancel">Cancel</button>
+                            </div>
+                </div>
+            </div>

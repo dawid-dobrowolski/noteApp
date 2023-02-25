@@ -1,0 +1,30 @@
+<!--include header-->
+<%- include('include/_header') %>
+<!--/include header-->
+<div class="container">
+    <div class="image_box">
+        <center>
+            <div class="image_wrapper">
+                <img src="img/home_page_img.png">
+            </div>
+        </center>
+    </div>
+    <div class="login_box">
+        <center>
+            <% if (message !== undefined) { %>   
+                <div class="response_fail">
+                    <p><%= message %></p> 
+                </div>    
+               <% } %>
+        <div class="register_box_content">
+            <p>First Time?</p>
+            <p class="extra_text">Fill the register form and create own Account!</p>
+<!--include register form-->
+<%- include('include/_register_form') %>
+<!--/include register form-->
+</div>
+</center>
+</div>
+</div>
+</body>
+</html>

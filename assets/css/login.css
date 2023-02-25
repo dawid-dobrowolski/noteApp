@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root{
+    --rich_black: #11151C;
+    --prusian_blue: #212d40;
+    --charcoal: #364156;
+    --rose_taupe: #7d3e57;
+    --jasper: #d66853;
+    --white: #ffffff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100vh;
+    background-color: var(--charcoal);
+    overflow-y: hidden;
+}
+/*<Left side of the login page>*/
+.image_box {
+    width: 50%;
+    background-color: var(--white);
+}
+.login_box {
+    width: 50%;
+}
+
+.image_wrapper {
+    width: 50vw;
+}
+
+.image_wrapper img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+/*</Left side of the login page>*/
+
+/*<Right side of the login page>*/
+.login_box {
+    margin-top: 10%;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.login_box_content{
+    margin-top: 40%;
+}
+
+.login_box_content p {
+    font-size: 35px;
+    color: var(--white);
+}
+.login_box_content  .extra_text {
+    font-size: 15px;
+    margin-bottom: 5%;
+}
+
+.login_box_content .form-group label {
+    font-size: 15px;
+    color: var(--white);
+}
+.login_box_content .form-control {
+    height: 45px;
+    width: 90%;
+    margin-bottom: 5%;
+    margin-top: 1%;
+    border: none;
+    color: var(--white);
+    background-color: var(--prusian_blue);
+}
+.login_box_content input {
+    padding: 5px;
+}
+.login_box_content button {
+    margin-top: 5%;
+    height: 45px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--rose_taupe);
+    color: var(--white)
+}
+.login_box_content button:hover {
+    margin-top: 5%;
+    height: 45px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    background-color: #693047;
+    color: var(--white)
+}
+
+.login_box_content a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.login_box_content a:hover {
+    text-decoration: none;
+    color: var(--jasper);
+}
+
+.response {
+    height: fit-content;
+    margin-top: 10%;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #8dc776;
+}
+/*</Right side of the login page>*/
